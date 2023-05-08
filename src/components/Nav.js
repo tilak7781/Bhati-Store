@@ -206,13 +206,13 @@ const Nav = () => {
               Contact
             </NavLink>
           </li>
+
           {isAuthenticated && <p>{user.name}</p>}
+
           {isAuthenticated ? (
             <li>
               <Button
-                onClick={() =>
-                  logout({ logoutParams: { returnTo: window.location.origin } })
-                }
+                onClick={() => logout({ returnTo: window.location.origin })}
               >
                 Log Out
               </Button>
